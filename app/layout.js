@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Libre_Franklin } from 'next/font/google'
+import { Gabarito } from 'next/font/google'
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

@@ -19,10 +19,10 @@ export function ProfilePage() {
       </CardHeader>
       <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="grid gap-4">
-          <adiv className="grid gap-2">
+          <div className="grid gap-2">
             <Label htmlFor="name">Name</Label>
             <Input id="name" value="Raju Shah" disabled />
-          </adiv>
+          </div>
           <div className="grid gap-2">
             <Label htmlFor="applicant-number">Applicant Number</Label>
             <Input id="applicant-number" value="123456" disabled />

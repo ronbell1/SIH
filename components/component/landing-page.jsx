@@ -6,7 +6,7 @@ export function LandingPage() {
     (<div className="flex flex-col min-h-[100dvh]">
       <header className="bg-background border-b">
         <div className="container flex items-center justify-between h-16 px-4 md:px-6">
-          <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <Link href="/" className="flex items-center gap-2" prefetch={false}>
             <GraduationCapIcon className="w-6 h-6 text-primary" />
             <span className="font-bold text-lg">Scholarship Portal</span>
           </Link>
@@ -18,13 +18,13 @@ export function LandingPage() {
               Institutions
             </Link>
             <Link
-              href="#"
+              href="/login"
               className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               prefetch={false}>
               Login
             </Link>
             <Link
-              href="#"
+              href="/signup"
               className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               prefetch={false}>
               Sign Up
@@ -52,7 +52,7 @@ export function LandingPage() {
                 towards your educational goals.
               </p>
               <Link
-                href="#"
+                href="/signup"
                 className="inline-flex items-center justify-center rounded-md bg-primary-foreground px-8 py-2 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-primary-foreground/90 focus:outline-none focus:ring-2 focus:ring-primary-foreground focus:ring-offset-2"
                 prefetch={false}>
                 Apply Now
@@ -85,7 +85,7 @@ export function LandingPage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="#"
+                    href="/signup"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     prefetch={false}>
                     Apply Now
@@ -105,7 +105,7 @@ export function LandingPage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="#"
+                    href="/signup"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     prefetch={false}>
                     Apply Now
@@ -127,7 +127,7 @@ export function LandingPage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="#"
+                    href="/signup"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     prefetch={false}>
                     Apply Now
@@ -147,7 +147,7 @@ export function LandingPage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="#"
+                    href="/signup"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     prefetch={false}>
                     Apply Now
@@ -167,7 +167,7 @@ export function LandingPage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="#"
+                    href="/signup"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     prefetch={false}>
                     Apply Now
@@ -189,7 +189,7 @@ export function LandingPage() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="#"
+                    href="/signup"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     prefetch={false}>
                     Apply Now

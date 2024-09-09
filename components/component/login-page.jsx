@@ -1,12 +1,41 @@
+"use client";
 import Link from "next/link"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
 export function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setError(error.message);
+    } else {
+      // Handle successful login
+      console.log("Login successful");
+      // Redirect to dashboard or another page
+    }
+  };
+
   return (
-    (<div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <header className="bg-primary text-primary-foreground py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
@@ -19,36 +48,57 @@ export function Login() {
         <div className="w-full max-w-md space-y-6">
           <div className="text-center">
             <h1 className="text-3xl font-bold">Welcome back!</h1>
-            <p className="text-muted-foreground">Sign in to your account to access the scholarship platform.</p>
+            <p className="text-muted-foreground">
+              Sign in to your account to access the scholarship platform.
+            </p>
           </div>
           <Card>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="name@example.com" />
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
-                  <Link
-                    href="#"
-                    className="text-sm text-primary hover:underline"
-                    prefetch={false}>
-                    Forgot password?
-                  </Link>
+              {error && (
+                <div className="text-red-500 text-sm text-center">{error}</div>
+              )}
+              <form onSubmit={handleLogin} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                 </div>
-                <Input id="password" type="password" />
-              </div>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="password">Password</Label>
+                    <Link
+                      href="#"
+                      className="text-sm text-primary hover:underline"
+                      prefetch={false}
+                    >
+                      Forgot password?
+                    </Link>
+                  </div>
+                  <Input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
+                <CardFooter>
+                  <Button type="submit" className="w-full">
+                    Sign in
+                  </Button>
+                </CardFooter>
+              </form>
             </CardContent>
-            <CardFooter>
-              <Button type="submit" className="w-full">
-                Sign in
-              </Button>
-            </CardFooter>
           </Card>
         </div>
       </main>
-    </div>)
+    </div>
   );
 }
 

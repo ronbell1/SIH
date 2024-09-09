@@ -6,7 +6,7 @@ export function Institution() {
     (<div className="flex flex-col min-h-[100dvh]">
       <header className="bg-primary py-4 px-6 md:px-8 lg:px-10">
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <Link href="/" className="flex items-center gap-2" prefetch={false}>
             <GraduationCapIcon className="h-6 w-6 text-primary-foreground" />
             <span className="text-lg font-semibold text-primary-foreground">Scholarship Hub</span>
           </Link>

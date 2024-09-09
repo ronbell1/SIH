@@ -14,7 +14,7 @@ export function LandingPage() {
             <Link href="/apply" className="text-sm font-medium hover:underline" prefetch={false}>
               Scholarships
             </Link>
-            <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+            <Link href="/institution" className="text-sm font-medium hover:underline" prefetch={false}>
               Institutions
             </Link>
             <Link
@@ -59,7 +59,7 @@ export function LandingPage() {
               </Link>
             </div>
             <img
-              src="/placeholder.svg"
+              src="/scholar.jpg "
               width="550"
               height="310"
               alt="Scholarship"

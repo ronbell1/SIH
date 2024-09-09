@@ -11,7 +11,7 @@ export function LandingPage() {
             <span className="font-bold text-lg">Scholarship Portal</span>
           </Link>
           <nav className="hidden md:flex items-center gap-4">
-            <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
+            <Link href="/apply" className="text-sm font-medium hover:underline" prefetch={false}>
               Scholarships
             </Link>
             <Link href="#" className="text-sm font-medium hover:underline" prefetch={false}>
